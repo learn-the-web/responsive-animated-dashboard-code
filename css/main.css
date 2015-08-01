@@ -1,6 +1,5 @@
 @-moz-viewport { width: device-width; scale: 1; }
 @-ms-viewport { width: device-width; scale: 1; }
-@-o-viewport { width: device-width; scale: 1; }
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
@@ -10,8 +9,6 @@ html {
 
   color: #fff;
   font: normal 100%/1.4 Ubuntu,sans-serif;
-
-  -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -342,19 +339,35 @@ tbody th {
 }
 
 .bar-wrap {
+  -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
 }
 
 .bar {
+  -webkit-animation: bar-up 1s ease-out;
   animation: bar-up 1s ease-out;
+  -webkit-transform-origin: 0 450px;
   transform-origin: 0 450px;
+}
+
+@-webkit-keyframes bar-up {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
 }
 
 @keyframes bar-up {
   0% {
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
   }
   100% {
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
 }
