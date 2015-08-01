@@ -51,9 +51,11 @@ a:focus {
 }
 
 .logo {
-  position: absolute;
-  right: 12px;
   height: 40px;
+  right: 12px;
+  position: absolute;
+
+  line-height: 40px;
 }
 
 .logo-img {
